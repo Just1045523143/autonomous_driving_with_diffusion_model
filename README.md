@@ -125,13 +125,13 @@ We provide our pre-trained model for users to evaluate the performance on the Ca
 mkdir checkpoints
 
 # Classifier-free guidance
-gdown 12jZFmxaNRq2NhY2cHL95KvydbEuiJH4Y -O checkpoints/free_guidance.pth
+wget https://github.com/Justin900429/autonomous_driving_with_diffusion_model/releases/download/v0.0.0/free_guidance_plus.pth -O checkpoints/free_guidance.pth
 
 # Classifier guidance
-gdown 1FZT1XsSuTUN5MawNsJaFNbBIt2xwPLgA -O checkpoints/classifier_guidance.pth
+wget https://github.com/Justin900429/autonomous_driving_with_diffusion_model/releases/download/v0.0.0/classifier_guidance.pth -O checkpoints/classifier_guidance.pth
 
 # Classifier gudiance (with more training data)
-gdown 1_a3fjs9M6MS4ofQuyStn3flT1kS_lbMC -O checkpoints/classifier_guidance_plus.pth
+wget https://github.com/Justin900429/autonomous_driving_with_diffusion_model/releases/download/v0.0.0/classifier_guidance_plus.pth -O checkpoints/classifier_guidance_plus.pth
 ```
 
 ### D-1. Environment setup
