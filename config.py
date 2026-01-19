@@ -27,7 +27,7 @@ def create_cfg():
 
     # ======== Training set =======
     cfg.TRAIN = CN()
-    cfg.TRAIN.RESUME = None
+    cfg.TRAIN.RESUME = '/home/robot/code/ros2/planning_ws/src/autonomous_driving_with_diffusion_model/classifier_guidance_result/checkpoints/checkpoint_15000.pth'
     cfg.TRAIN.USE_COND = "NO_GUIDANCE"
     cfg.TRAIN.USE_FREE_COND_PROB = 0.7
     cfg.TRAIN.LOG_INTERVAL = 20

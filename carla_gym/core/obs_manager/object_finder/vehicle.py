@@ -117,13 +117,13 @@ class ObsManager(ObsManagerBase):
 
         obs_dict = {
             "frame": self._world.get_snapshot().frame,
-            "binary_mask": np.array(binary_mask, dtype=np.int8),
+            "binary_mask": np.array(binary_mask, dtype=np.int32),
             "location": np.array(location, dtype=np.float32),
             "rotation": np.array(rotation, dtype=np.float32),
             "extent": np.array(extent, dtype=np.float32),
             "absolute_velocity": np.array(absolute_velocity, dtype=np.float32),
-            "road_id": np.array(road_id, dtype=np.int8),
-            "lane_id": np.array(lane_id, dtype=np.int8),
+            "road_id": np.array(road_id, dtype=np.int32),
+            "lane_id": np.array(lane_id, dtype=np.int32),
         }
         return obs_dict
 

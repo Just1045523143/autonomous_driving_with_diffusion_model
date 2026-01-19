@@ -17,7 +17,7 @@ def kill_carla():
 
 
 class CarlaServerManager:
-    def __init__(self, carla_sh_str, port=2000, config=None, t_sleep=5):
+    def __init__(self, carla_sh_str, port=2000, config=None, t_sleep=15):
         self._carla_sh_str = carla_sh_str
         self._t_sleep = t_sleep
 

@@ -94,6 +94,7 @@ def evaluate(
             color = COLOR_LIST[color_idx % len(COLOR_LIST)]
             pixel_x = way_point_to_pixel(x.item())
             pixel_y = way_point_to_pixel(y.item())
+            # 绘制轨迹点
             bev_image = cv2.circle(bev_image, (pixel_x, pixel_y), 3, color, -1)
 
     if filename is not None:
@@ -173,6 +174,7 @@ def main(args):
         num_warmup_steps=cfg.TRAIN.LR_WARMUP,
     )
 
+    # 准备组件
     model, optimizer, lr_scheduler, dataloader = accelerator.prepare(
         model, optimizer, lr_scheduler, dataloader
     )

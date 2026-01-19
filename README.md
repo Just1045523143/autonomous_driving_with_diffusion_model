@@ -51,7 +51,7 @@ unzip -q data.zip && rm data.zip
 python misc/data_collect.py --save-path {PLACE_TO_SAVE_DATA} --save-num {NUM_OF_DATA}
 
 # Concrete example
-python misc/data_collect.py --save-path data/ --save-num 5000
+python misc/data_collect.py --save-path /mnt/data/carla_data/ --save-num 5000
 ```
 
 > If you would like to collect data under `off-screen` mode, please add the flag `--off-screen`.
@@ -82,6 +82,8 @@ Users can choose the config file as shown below to train the model.
 ```shell
 # with single-gpu
 python train.py --config {CONFIG_PATH}
+# example:
+python train.py --config configs/guidance/classifier_guidance.yaml
 
 # with multi-gpus
 accelerate launch --multi_gpu --num_processes={NUM_OF_GPU} train.py --config {CONFIG_PATH}
